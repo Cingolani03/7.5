@@ -19,25 +19,34 @@ float[] elencoCarte={1f,2f,3f,4f,5f,6f,7f,0.5f,0.5f,0.5f,
 		       1f,2f,3f,4f,5f,6f,7f,0.5f,0.5f,0.5f};
 
 String risposta;
-int i,carta=0,tot=0;
+int i,carta=0;
+float conta=0f,tot=0;
 Random r=new Random();
 
+
+do {
 do
 {
-for(i=0;i<1;i++) {
-	carta=r.nextInt(elencoCarte.length);
+
+carta=r.nextInt(elencoCarte.length);
 System.out.println("la carta pescata è: " + elencoCarte[carta]);
-}
-if(carta>7.5) {
-	System.out.println("Hai sballato");
-}	
-tot=tot+carta;
+conta=elencoCarte[carta];
+tot=tot+conta;
 System.out.println("la tua somma è: " + tot);
+if(tot>7.5) {
+	System.out.println("hai sballato");
+break;}
+	if(tot==7.5f) {
+		System.out.println("bravo!");
+		break;}
+		if(tot<7.5)
 System.out.println("vuoi pescare un'altra carta ?");
 risposta=sc.nextLine();
 }while(risposta.equals("si"));
-System.out.println("stai");
-System.out.println("la tua somma è: " + tot);
+
+System.out.println("vuoi pescare un'altra carta ?");
+risposta=sc.nextLine();
+}while(risposta.equals("si"));
 	}
 
 }

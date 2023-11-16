@@ -40,8 +40,7 @@ do
 	}
 carta=r.nextInt(elencoCarte.length);
 System.out.println("la carta pescata è: " + tipoCarte[carta]);
-for(i=0;i<40;i++) {
-	
+for(i=0;i<40;i++) {	
 }
 conta=elencoCarte[carta];
 tot=tot+conta;
@@ -60,6 +59,8 @@ risposta=sc.nextLine();
 System.out.println("vuoi giocare ancora ?");
 risposta=sc.nextLine();
 }while(risposta.equals("si"));
+System.out.println("arrivederci");
+
 sc.close();
 	}
 
